@@ -13,7 +13,6 @@ void Train::addCar(bool light) {
         first->prev = first;
     } else {
         Car* tail = first->prev;
-        
         tail->next = node;
         node->prev = tail;
         node->next = first;
@@ -25,7 +24,6 @@ int Train::getLength() {
     if (first == nullptr) return 0;
 
     first->light = true;
-    
     Car* cursor = first;
     int steps_forward = 0;
 
